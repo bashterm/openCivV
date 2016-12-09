@@ -14,7 +14,7 @@ public class mainMenu extends JFrame{
 		setTitle("Menu");
 		setSize(200,400);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		JButton quitButton = new JButton("Quit");
 		quitButton.addActionListener((ActionEvent event) ->{

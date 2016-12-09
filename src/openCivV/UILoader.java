@@ -4,22 +4,21 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
-public class UILoader extends JFrame {
+public class UILoader {
 	public static void main(String[] args){
-		EventQueue.invokeLater(() ->{
-			UILoader load= new UILoader();
-			load.setVisible(true);;
-		});
+		initUI();
 	}
 	public UILoader() {
 		initUI();
 	}
-	private void initUI(){
-		setTitle("Open Civ V");
-		setSize(1280,720);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	private static void initUI(){
+		JFrame frame = new JFrame();
+		frame.setTitle("Open Civ V");
+		frame.setSize(1280,720);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		
+		frame.setVisible(true);
 		JButton menuButton = new JButton("Menu");
 		menuButton.addActionListener((ActionEvent event) ->{
 			mainMenu.mainMenu();
@@ -27,7 +26,7 @@ public class UILoader extends JFrame {
 		
 		createLayout(menuButton);
 	}
-	 private void createLayout(JComponent... arg) {
+	 private static void createLayout(JComponent... arg) {
 
 	        Container pane = getContentPane();
 	        GroupLayout gl = new GroupLayout(pane);
