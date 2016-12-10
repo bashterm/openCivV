@@ -16,7 +16,7 @@ public class mainMenu extends JFrame{
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
-		JButton quitButton = new JButton("Quit");
+		JButton quitButton = new customButton("Quit");
 		quitButton.addActionListener((ActionEvent event) ->{
 			System.exit(0);
 		});
