@@ -2,25 +2,32 @@ package openCivV;
 
 import java.awt.Container;
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
-public class mainMenu extends JFrame {
+public class mainMenu {
 	private void initUI() {
-		setTitle("Menu");
-		setSize(200, 400);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		FlowLayout centerLayout = new FlowLayout(FlowLayout.CENTER);
+		JFrame frame = new JFrame();
+		frame.setLayout(centerLayout);
+		frame.setTitle("Menu");
+		frame.setSize(200, 400);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
 
 		JButton quitButton = new customButton("Quit");
 		quitButton.addActionListener((ActionEvent event) -> {
 			System.exit(0);
 		});
-		createLayout(quitButton);
+		frame.add(quitButton);
+		frame.setVisible(true);
+		
 	}
 
 	public mainMenu() {
@@ -28,24 +35,13 @@ public class mainMenu extends JFrame {
 	}
 
 	public static void mainMenu() {
-		EventQueue.invokeLater(() -> {
-			mainMenu men = new mainMenu();
-			men.setVisible(true);
-			;
+		SwingUtilities.invokeLater(new Runnable(){
+			@Override
+			public void run(){
+				new mainMenu();
+			}
 		});
 	}
 
-	private void createLayout(JComponent... arg) {
-
-		Container pane = getContentPane();
-		GroupLayout gl = new GroupLayout(pane);
-		pane.setLayout(gl);
-
-		gl.setAutoCreateContainerGaps(true);
-
-		gl.setHorizontalGroup(gl.createSequentialGroup().addComponent(arg[0]));
-
-		gl.setVerticalGroup(gl.createSequentialGroup().addComponent(arg[0]));
-	}
 
 }
