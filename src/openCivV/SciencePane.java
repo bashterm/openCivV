@@ -11,7 +11,6 @@ public class SciencePane extends JPanel {
 		this.setLayout(centerLayout);
 		this.setBackground(Color.black);
 		this.setSize(vars.xdimen/3,vars.ydimen - 120);
-		
 		this.setVisible(true);
 	}
 }
