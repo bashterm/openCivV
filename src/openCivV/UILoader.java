@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class UILoader {
-	
+	public static SciencePane science = new SciencePane();
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable(){
 			@Override
@@ -24,6 +24,7 @@ public class UILoader {
 	private static void initUI() {
 		BorderLayout overAllLayout = new BorderLayout();
 		TopBar bar = new TopBar();
+		
 		JFrame frame = new JFrame();
 		frame.setLayout(overAllLayout);
 		frame.setTitle("Open Civ V");
@@ -31,6 +32,7 @@ public class UILoader {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.add(bar, overAllLayout.PAGE_START);
+		frame.add(science, overAllLayout.LINE_START);
 		frame.setVisible(true);
 	}
 
