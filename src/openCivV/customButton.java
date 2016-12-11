@@ -12,5 +12,6 @@ public class customButton extends JButton {
 		setBackground(Color.BLACK);
 		setForeground(Color.WHITE);
 		setFont(new Font("Tahoma", Font.BOLD, 12));
+		setBorder(borders.empty);
 	}
 }
