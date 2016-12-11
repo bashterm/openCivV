@@ -10,6 +10,8 @@ public class SciencePane extends JPanel {
 		FlowLayout centerLayout = new FlowLayout(FlowLayout.CENTER);
 		this.setLayout(centerLayout);
 		this.setBackground(Color.black);
-		this.setSize(vars.xdimen/3,vars.ydimen);
+		this.setSize(vars.xdimen/3,vars.ydimen - 120);
+		
+		this.setVisible(true);
 	}
 }
