@@ -17,7 +17,7 @@ public class mainMenu {
 		JFrame frame = new JFrame();
 		frame.setLayout(centerLayout);
 		frame.setTitle("Menu");
-		frame.setSize(vars.xdimen/6, vars.ydimen);
+		frame.setSize(vars.xdimen/6, vars.ydimen/2);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
 
@@ -27,7 +27,6 @@ public class mainMenu {
 		});
 		frame.add(quitButton);
 		frame.setVisible(true);
-		
 	}
 
 	public mainMenu() {
