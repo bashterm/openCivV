@@ -17,7 +17,7 @@ public class mainMenu {
 		JFrame frame = new JFrame();
 		frame.setLayout(centerLayout);
 		frame.setTitle("Menu");
-		frame.setSize(200, 400);
+		frame.setSize(vars.xdimen/3, vars.ydimen/3);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
 
