@@ -22,19 +22,16 @@ public class UILoader {
 	}
 
 	private static void initUI() {
-		FlowLayout menuLayout = new FlowLayout(FlowLayout.TRAILING);
+		BorderLayout overAllLayout = new BorderLayout();
+		TopBar bar = new TopBar();
 		JFrame frame = new JFrame();
-		frame.setLayout(menuLayout);
+		frame.setLayout(overAllLayout);
 		frame.setTitle("Open Civ V");
-		frame.setSize(1280, 720);
+		frame.setSize(vars.xdimen, vars.ydimen);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		JButton menuButton = new customButton("Menu");
-		frame.add(menuButton);
+		frame.add(bar, overAllLayout.PAGE_START);
 		frame.setVisible(true);
-		menuButton.addActionListener((ActionEvent event) -> {
-			mainMenu.mainMenu();
-		});
 	}
 
 }
