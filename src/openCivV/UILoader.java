@@ -35,5 +35,4 @@ public class UILoader {
 		frame.add(science, overAllLayout.LINE_START);
 		frame.setVisible(true);
 	}
-
 }

@@ -8,5 +8,6 @@ public class techTree {
 		frame.setSize(vars.xdimen/2,vars.ydimen/2);
 		frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
 		frame.setVisible(true);
+		frame.setLocationRelativeTo(null);
 	}
 }
